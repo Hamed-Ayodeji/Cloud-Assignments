@@ -1,0 +1,5 @@
+# Content of my cronjob
+
+5 * * * * /usr/bin/bash /home/qurtana/work/memory_usage.sh
+0 0 * * * cat /home/qurtana/work/memory_usage.log | mail -s "hourly memory usage cronjob" ayodejihamed@gmail.com
+2 0 * * * /usr/bin/rm -f /home/qurtana/work/memory_usage.log
