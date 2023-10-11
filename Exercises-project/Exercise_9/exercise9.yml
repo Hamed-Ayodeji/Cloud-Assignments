@@ -1,0 +1,34 @@
+---
+- name: Configure Apache server in Africa/Lagos timezone
+  hosts: exe
+  remote_user: vagrant
+  become: yes
+  tasks:
+    - name: Update system packages
+      apt:
+        update_cache: yes
+
+    - name: Install Apache2
+      apt:
+        name: apache2
+        state: latest
+
+    - name: Install php
+      apt:
+        name: php
+        state: latest
+
+    - name: Configure timezone
+      timezone:
+        name: Africa/Lagos
+
+    - name: Create index.php to render the server
+      template:
+        src: templates/index.php.j2
+        dest: /var/www/html/index.php
+
+    - name: Reload apache2
+      command: sudo systemctl reload apache2
+
+    - name: Restart apache2
+      command: sudo systemctl restart apache2
