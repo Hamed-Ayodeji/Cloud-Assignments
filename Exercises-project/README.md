@@ -12,6 +12,8 @@ Exercise_5. Install PHP 7.4 on your local linux machine using the ppa:ondrej/php
 
 Exercise_6. clone the altschool-cloud-exercises project repo, setup you name and email in git's global config and submit the output of git config -l, git remote -v and git log commands
 
+Exercise_7. Utilize at least 10 of the CIS security benchmarks for Ubuntu 20.04 LTS to harden your local machine, submit the output of the commands used to harden the machine and a screenshot of the output of the lynis audit command
+
 Exercise_8. create a bash script to run at every hour, saving system memory (RAM) usage to a specified file and at midnight it sends the content of the file to a specified email address, then start over for the new day
 
 Exercise 9. create an ansible playbook to setup a sever with Apache, the server should be set to the Africa/Lagos timezone, host an index.php file with the following content as the main file on the server:
@@ -24,4 +26,4 @@ Exercise 9. create an ansible playbook to setup a sever with Apache, the server 
 
 submit the ansible playbook, the output of systemctl status apache2 after deploying the playbook and a screenshot of the rendered page.
 
-Exercise 10. 
+Exercise 10. `193.16.20.35/29` What is the network IP, number of hosts, range of IP addresses and broadcast IP from this subnet?
